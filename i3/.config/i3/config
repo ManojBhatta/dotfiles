@@ -60,14 +60,14 @@ exec_always --no-startup-id xfce4-power-manager
 #exec_always --no-startup-id greenclip daemon
 
 # Set wallpaper with feh
-exec_always feh --bg-fill /home/manoj/Pictures/wallpapers/002.jpg
+exec_always feh --bg-fill /home/manoj/.config/backgrounds/004.jpg
 
 workspace_auto_back_and_forth yes
 
 # betterlockscreen
 bindsym $mod+shift+x exec systemctl suspend
 #####################################################################################################################
-#################                          Audio Control                                            #################
+#################                          Audio Contrsl                                            #################
 #####################################################################################################################
 
 # Use pactl to adjust volume in PulseAudio.
@@ -81,30 +81,25 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #################                         Backlight Control                                        #################
 #####################################################################################################################
 
-# Adjust the screen brightness with xbacklight.
-# bindsym F11 exec xbacklight -dec 10
-# bindsym F12 exec xbacklight -inc 10
-# bindsym F2 exec xbacklight -dec 10
-# bindsym F3 exec xbacklight -inc 10
+# Adjust the screen brightness with brightnessctl.
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/brightness_control.sh up
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/brightness_control.sh down
 
 #####################################################################################################################
 #################                         Screenshot                                                #################
 #####################################################################################################################
-
 # Launch Flameshot GUI
 bindsym Print exec flameshot gui
 
 #####################################################################################################################
 #################                         Screen Recorder                                           #################
 #####################################################################################################################
-
 # Launch SimpleScreenRecorder
 bindsym Shift+Print exec simplescreenrecorder
 
 #####################################################################################################################
 #################                         Drag Floating Windows                                    #################
 #####################################################################################################################
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
