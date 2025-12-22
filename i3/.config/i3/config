@@ -26,7 +26,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 
 # Run command to make Polybar executable: chmod +x $HOME/.config/polybar/launch.sh
 # Autostart Polybar launch script
@@ -60,7 +60,7 @@ exec_always --no-startup-id xfce4-power-manager
 #exec_always --no-startup-id greenclip daemon
 
 # Set wallpaper with feh
-exec_always feh --bg-fill /home/manoj/.config/backgrounds/004.jpg
+exec_always feh --bg-fill /home/manoj/.config/backgrounds/014.jpg
 
 workspace_auto_back_and_forth yes
 
@@ -308,9 +308,9 @@ bindsym $mod+r mode "resize"
 #####################################################################################################################
 
 # class                 border  bground text    indicator child_border
-client.focused          #83a598 #83a598 #fbf1c7 #83a598   #83a598
-client.focused_inactive #282828 #282828 #ebdbb2 #928374   #928374
-client.unfocused        #282828 #504945 #ebdbb2 #928374   #928374
+client.focused          #458588 #458588 #1d2021 #458588   #458588
+client.focused_inactive #282828 #282828 #282828 #928374   #928374
+client.unfocused        #504945 #504945 #282828 #928374   #928374
 client.urgent           #282828 #282828 #fb4934 #282828   #282828
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
